@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: skyline
-        image: your-registry/skyline:latest
+        image: 646558765106.dkr.ecr.ap-northeast-2.amazonaws.com/skyline-lhs:latest
         ports:
         - containerPort: 8080
           name: http
