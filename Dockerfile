@@ -12,6 +12,7 @@ WORKDIR /app
 COPY pom.xml .
 RUN mvn dependency:go-offline -B
 COPY src ./src
+COPY --from=frontend-build /app/frontend/dist ./src/main/resources/static
 RUN mvn clean package -DskipTests
 
 # 최종 런타임 이미지
@@ -23,7 +24,7 @@ RUN apk add --no-cache curl
 
 WORKDIR /app
 COPY --from=backend-build /app/target/*.jar app.jar
-COPY --from=frontend-build /app/frontend/dist ./static
+#COPY --from=frontend-build /app/frontend/dist ./static
 
 # 설정 파일 복사
 COPY src/main/resources/application.yml ./
