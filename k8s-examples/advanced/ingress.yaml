@@ -12,17 +12,8 @@ metadata:
     alb.ingress.kubernetes.io/unhealthy-threshold-count: '3'
 spec:
   rules:
-  - host: skyline-demo.your-domain.com
+  - host: app.sophiel.shop
     http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: skyline-service
-            port:
-              number: 80
-  - http:
       paths:
       - path: /
         pathType: Prefix

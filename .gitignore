@@ -157,3 +157,6 @@ charts/*.tgz
 # GitHub CLI
 gh_2.40.1_linux_amd64/
 gh.tar.gz
+
+#secret
+k8s-examples/basic/secret.yaml

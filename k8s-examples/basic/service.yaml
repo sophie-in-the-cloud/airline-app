@@ -5,6 +5,7 @@ metadata:
   labels:
     app: skyline
 spec:
+  type: NodePort
   selector:
     app: skyline
   ports:
@@ -12,4 +13,3 @@ spec:
     port: 80
     targetPort: 8080
     protocol: TCP
-  type: LoadBalancer
